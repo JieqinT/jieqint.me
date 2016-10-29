@@ -2,18 +2,31 @@
   <head>
     <title>JieqinT</title>
     <link rel="stylesheet" href="includes/stylesheet.css" type="text/css" />
+    <script src="includes/script.js"></script>
   </head>
   <body>
     <div class="main_title">
       JieqinT
     </div>
-    <div class="main_body">
-      Hi, I am <span id="highlight">Tay Jie Qin</span>.<br /><br />
-      I am a student in <span id="highlight">Digipen, Singapore</span>.<br /><br />
+    <div id="tabs">
+      <ul>
+        <li href="javascript:void(0)" onclick="show_tab('Home')" class="tab" id="selected">Home</li>
+        <li href="javascript:void(0)" onclick="show_tab('Education')" class="tab">Education</li>
+        <li href="javascript:void(0)" onclick="show_tab('Competition')" class="tab">Competitions</li>
+      </ul>
+    </div>
+    <div class="main_body" id="Home" style="display: block">
+      Hi, I am <span class="highlight">Tay Jie Qin</span>.<br /><br />
+    </div>
+    <div class="main_body" id="Education">
+      I am a student in <span class="highlight">Digipen, Singapore</span>.<br /><br />
       I am currently pursuing a degree in<br />
-      <span id="highlight">Computer Science in Real-Time Simulation</span>.<br /><br />
-      I am currently holding a diploma in<br />
-      <span id="highlight">Infocomm & Network Engineering</span>.<br /><br />
+      <span class="highlight">BS in Computer Science in Real-Time Interactive Simulation</span>, enrolled in 2016.<br /><br />
+      I had acquired a <span class="highlight">Diploma in
+      Infocomm & Network Engineering</span> from <span class="highlight">Temasek Polytechnic</span> in 2014.<br /><br />
+    </div>
+    <div class="main_body" id="Competition">
+      4th, Innovation and World Citizenship Category - <span class="highlight">Imagine Cup 2013</span><br />
 
     </div>
     <div class="footer">
