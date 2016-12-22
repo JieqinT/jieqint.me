@@ -2,8 +2,11 @@ var trC = "</tr>";
 
 function PrintMonster(name, element, aName, stars, bold, child){
     document.writeln(TRO(element, bold, child));
-    if(child)
+    if(!child && !bold)
         for(x = 0; x < 3; ++x)
+            name = "&nbsp;"+name;
+    if(child)
+        for(x = 0; x < 6; ++x)
             name = "&nbsp;"+name;
     document.writeln(WrapTD(name));
     document.writeln(WrapTD(element));
