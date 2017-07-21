@@ -46,13 +46,10 @@
         var link = 'https://www.reddit.com/';
         if(objs.sub != undefined)
             link += 'r/'+objs.sub+'/';
-        else if(objs.user != undefined)
-            link += 'u/'+objs.user;
         else
             link += 'r/singapore/';
 
-        if(objs.user == undefined)
-            link += objs.sort == undefined ? "new" : objs.sort;
+        link += objs.sort == undefined ? "new" : objs.sort;
         link += '/.json';
         return link;
     }
@@ -73,7 +70,7 @@
                     for(var i = 0; i < 15; ++i){
                         var data = content[i].data;
                         document.writeln("<tr><td>"+(data.ups - (data.is_self==false ? 1 : 0))+"</td>");
-                        document.writeln("<td><a href='" + (GetObjects().user!=undefined ? data.link_permalink : data.url) + "'>" + (data.title != undefined ? data.title : data.body) + "</a></td>");
+                        document.writeln("<td><a href='https://reddit.com" + data.permalink + "'>" + (data.title != undefined ? data.title : data.body) + "</a></td>");
                         document.writeln("<td>" + data.num_comments + "</td>");
                         document.writeln("<td>" + ConvTime(data.created_utc) + "</td><tr/>");
                     }
