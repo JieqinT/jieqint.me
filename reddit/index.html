@@ -67,7 +67,7 @@
                     document.writeln("<h1>Latest Posts</h1>");
                     var content = json.data.children;
                     document.writeln("<table><th>Votes</th><th>Title</th><th>Comments</th><th>Time</th>");
-                    for(var i = 0; i < 15; ++i){
+                    for(var i = 0; i < 25; ++i){
                         var data = content[i].data;
                         document.writeln("<tr><td>"+(data.ups - (data.is_self==false ? 1 : 0))+"</td>");
                         document.writeln("<td><a href='https://reddit.com" + data.permalink + "'>" + (data.title != undefined ? data.title : data.body) + "</a></td>");
