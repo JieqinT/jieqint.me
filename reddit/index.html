@@ -64,7 +64,7 @@
                     alert('Something went wrong: ' + err);
                 else {
                     document.writeln("<link rel='stylesheet 'type='text/css' href='stylesheet.css'/>");
-                    document.writeln("<h1>Latest Posts</h1>");
+                    document.writeln("<h1>Latest Posts From <a href='https://reddit.com/r/"+(GetObjects().sub == undefined ? "singapore" : GetObjects().sub)+"'>/r/" + (GetObjects().sub == undefined ? "singapore" : GetObjects().sub) + "</a></h1>");
                     var content = json.data.children;
                     document.writeln("<table><th>Votes</th><th>Title</th><th>Comments</th><th>Time</th>");
                     for(var i = 0; i < 25; ++i){
