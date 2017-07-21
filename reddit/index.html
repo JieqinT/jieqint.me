@@ -33,7 +33,7 @@
     }
     function GetObjects(){
         var sub = window.location.search.slice(1).split('=')[1];
-        if(sub="")
+        if(sub==undefined)
             sub="singapore";
         return sub;
     }
