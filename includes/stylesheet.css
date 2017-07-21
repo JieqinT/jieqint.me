@@ -12,9 +12,12 @@ div{
   margin: 1.5em auto;
 }
 img{
-  width:4em;
-  height:4em;
+  width: 4em;
+  height: 4em;
   border-radius: 1em solid black;
+}
+a{
+  color: inherit;
 }
 
 .main_title{
