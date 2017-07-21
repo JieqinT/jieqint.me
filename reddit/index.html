@@ -1,0 +1,59 @@
+<html>
+<head>
+    <script>
+    var getJSON = function(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+            var status = xhr.status;
+            if (status == 200) {
+                callback(null, xhr.response);
+            } else
+                callback(status);
+        };
+        xhr.send();
+    };
+
+    function ConvTime(utc){
+        var date = new Date(utc*1000);
+        var now = new Date();
+        var diff = now - date;
+        return ToH_S(diff);
+    }
+    function ToH_S(msec){
+        var min = Math.floor(msec/1000/60);
+        var hour = 0;
+        while(min >= 60){
+            min -= 60;
+            ++hour;
+        }
+        var str = hour != 0 ? hour + "h " : "";
+        return str + min + "m";
+    }
+    </script>
+</head>
+<body>
+    <div id="table">
+        <script>
+            getJSON('https://www.reddit.com/r/'+window.location.search.slice(1).split('=')[1]+'/new/.json',
+            function(err, json) {
+                if (err != null)
+                    alert('Something went wrong: ' + err);
+                else {
+                    document.writeln("<link rel='stylesheet 'type='text/css' href='stylesheet.css'/>");
+                    document.writeln("<h1>Latest Posts</h1>");
+                    var data = json.data.children;
+                    document.writeln("<table><th>Votes</th><th>Title</th><th>Time</th>");
+                    for(var i = 0; i < 15; ++i){
+                        document.writeln("<tr><td>"+(data[i].data.ups - (data[i].data.is_self==false ? 1 : 0))+"</td>");
+                        document.writeln("<td>" + data[i].data.title + "</td>");
+                        document.writeln("<td>" + ConvTime(data[i].data.created_utc) + "</td><tr/>");
+                    }
+                    document.writeln("</table>");
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
