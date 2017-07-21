@@ -1,7 +1,7 @@
 <html>
 <head>
     <script>
-    var getJSON = function(url, callback) {
+    var GetJSON = function(url, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
         xhr.responseType = 'json';
@@ -31,12 +31,19 @@
         var str = hour != 0 ? hour + "h " : "";
         return str + min + "m";
     }
+    function GetObjects(){
+        var sub = window.location.search.slice(1).split('=')[1];
+        if(sub="")
+            sub="singapore";
+        return sub;
+    }
     </script>
 </head>
 <body>
     <div id="table">
         <script>
-            getJSON('https://www.reddit.com/r/'+window.location.search.slice(1).split('=')[1]+'/new/.json',
+            var sub = GetObjects();
+            GetJSON('https://www.reddit.com/r/'+sub+'/new/.json',
             function(err, json) {
                 if (err != null)
                     alert('Something went wrong: ' + err);
