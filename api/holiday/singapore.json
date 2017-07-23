@@ -1,0 +1,84 @@
+{
+    "singapore":[{
+        "year":"2017",
+        "data":[{
+            "name":"New Year's Day",
+            "date":"2017-01-01"
+        },{
+            "name":"New Year's Day (Lieu)",
+            "date":"2017-01-02"
+        },{
+            "name":"Chinese New Year Day 1",
+            "date":"2017-01-28"
+        },{
+            "name":"Chinese New Year Day 2",
+            "date":"2017-01-29"
+        },{
+            "name":"Chinese New Year Day 3",
+            "date":"2017-01-30"
+        },{
+            "name":"Good Friday",
+            "date":"2017-04-14"
+        },{
+            "name":"Labour Day",
+            "date":"2017-05-01"
+        },{
+            "name":"Vesak Day",
+            "date":"2017-05-10"
+        },{
+            "name":"Hari Raya Puasa",
+            "date":"2017-06-25"
+        },{
+            "name":"Hari Raya Puasa (Lieu)",
+            "date":"2017-06-25"
+        },{
+            "name":"National Day",
+            "date":"2017-08-09"
+        },{
+            "name":"Hari Raya Haji",
+            "date":"2017-09-01"
+        },{
+            "name":"Deepavali",
+            "date":"2017-10-18"
+        },{
+            "name":"Christmas Day",
+            "date":"2017-12-25"
+        }]
+    },{
+        "year":"2017",
+        "data":[{
+            "name":"New Year's Day",
+            "date":"2017-01-01"
+        },{
+            "name":"Chinese New Year",
+            "date":"2017-02-16"
+        },{
+            "name":"Chinese New Year",
+            "date":"2017-02-17"
+        },{
+            "name":"Good Friday",
+            "date":"2017-03-30"
+        },{
+            "name":"Labour Day",
+            "date":"2017-05-01"
+        },{
+            "name":"Vesak Day",
+            "date":"2017-05-29"
+        },{
+            "name":"Hari Raya Puasa",
+            "date":"2017-06-15"
+        },{
+            "name":"National Day",
+            "date":"2017-08-09"
+        },{
+            "name":"Hari Raya Haji",
+            "date":"2017-08-22"
+        },{
+            "name":"Deepavali",
+            "date":"2017-11-06"
+        },{
+            "name":"Christmas Day",
+            "date":"2017-12-25"
+        }]
+    }]
+}

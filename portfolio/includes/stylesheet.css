@@ -1,0 +1,102 @@
+body{
+  background-color:black;
+  margin: 2em auto;
+  overflow: hidden;
+}
+div{
+  background: rgba(255,255,255,0.3);
+  border-radius: .3em;
+  color: white;
+  font-family: monospace;
+  text-align: center;
+  margin: 1.5em auto;
+}
+img{
+  width: 4em;
+  height: 4em;
+  border-radius: 1em solid black;
+}
+a{
+  color: inherit;
+}
+
+.main_title{
+  width: 300px;
+  margin: .2em auto;
+  padding: .1em;
+
+  font-size: 3em;
+}
+.main_body{
+  display: none;
+  width: 600px;
+  height: 52%;
+  padding: .5em .2em .5em .2em;
+
+  font-size: 1.5em;
+}
+.footer{
+  width: 40%;
+  padding-top: 1em;
+  padding-bottom: .5em;
+
+  font-size: 1em;
+}
+
+.highlight{
+  font-size: 1em;
+  font-weight: bold;
+  color: Cornsilk;
+}
+
+#tabs{
+  width: 500px;
+  border-radius: .5em;
+  font: 1em Courier, monospace;
+}
+#tabs ul{
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+#tabs li{
+  float: left;
+  padding: .6em 1em .6em 1em;
+  margin: 0 .3em 0 0;
+}
+#tabs li:hover{
+  background-color: darkgrey;
+  border-radius: .5em;
+  cursor: hand;
+}
+#selected{
+  background-color: grey;
+  border-radius: .5em;
+}
+
+#tabs a{
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width : 640px) {
+  img{
+    width: 30px;
+    height: 30px;
+  }
+
+  #tabs{
+    width: 80%;
+  }
+
+  .main_body{
+    width: 90%;
+    height: 58%;
+    font-size: 1.5em;
+  }
+
+  .footer{
+    width: 60%
+  }
+}
