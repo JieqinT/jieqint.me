@@ -186,7 +186,7 @@ function getRedditPosts(count, div){
 		for(var i = 0; i < count; ++i){
 			var data = json.data.children[i].data;
 			str += "<div class='tiny'>";
-			str += "<a href='https://www.reddit.com" + data.permalink + "' target='_blank'>";
+			str += "<a href='https://reddit.com" + data.permalink + "' target='_blank'>";
 			str += data.title + "</a></div><div class='puny'>" + (data.ups) + " upvotes, "+data.num_comments+" comments";
 			if(count != i+1)
 				str += "<hr class='divider'>";
@@ -199,7 +199,7 @@ function getRedditPosts(count, div){
 
 function getJSON(url, callback) {
 	var rawFile = new XMLHttpRequest();
-	rawFile.responseType = 'json';
+	rawFile.overrideMimeType("application/json");
 	rawFile.open("GET", url, true);
 	rawFile.onreadystatechange = function() {
 		if(rawFile.readyState == 4){
@@ -212,16 +212,3 @@ function getJSON(url, callback) {
 	}
 	rawFile.send(null);
 }
-var GetJSON = function(url, callback) {
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', url, true);
-	xhr.responseType = 'json';
-	xhr.onload = function() {
-		var status = xhr.status;
-		if (status == 200) {
-			callback(null, xhr.response);
-		} else
-			callback(status);
-	};
-	xhr.send();
-};
