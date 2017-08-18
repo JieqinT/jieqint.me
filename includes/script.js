@@ -199,7 +199,7 @@ function getRedditPosts(count, div){
 
 function getJSON(url, callback) {
 	var rawFile = new XMLHttpRequest();
-	rawFile.open("GET", url, true);
+	rawFile.open("POST", url, true);
 	try{
 		rawFile.overrideMimeType("application/json");
 	}catch(e){}
