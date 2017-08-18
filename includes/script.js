@@ -219,5 +219,5 @@ function getJSON(url, callback) {
 			}
 		}
 	}
-	rawFile.send(null);
+	rawFile.send();
 }
