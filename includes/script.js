@@ -201,7 +201,6 @@ function getJSON(url, callback) {
 	var rawFile = new XMLHttpRequest();
 	rawFile.open("GET", url, true);
 	rawFile.setRequestHeader('Access-Control-Allow-Origin', '*');
-	rawFile.setRequestHeader('Access-Control-Allow-Methods', 'GET');
 	try{
 		rawFile.overrideMimeType("application/json");
 	}catch(e){}
