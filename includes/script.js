@@ -180,6 +180,7 @@ function getIPAddress(){
 	});
 }
 function getRedditPosts(count, div){
+	/*
 	getJSON("https://reddit.com/r/singapore/new/.json", function(text){
 		var json = JSON.parse(text);
 		var str = "";
@@ -195,6 +196,7 @@ function getRedditPosts(count, div){
 		document.getElementById(div).innerHTML = str;
 		document.getElementById(div).style.height = 'auto';
 	});
+	*/
 }
 
 function getJSON(url, callback) {
