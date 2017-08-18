@@ -199,8 +199,10 @@ function getRedditPosts(count, div){
 
 function getJSON(url, callback) {
 	var rawFile = new XMLHttpRequest();
-	if ("withCredentials" in rawFile)
+	if ("withCredentials" in rawFile){
 		rawFile.open("GET", url, true);	
+		rawFile.withCredentials = true;
+	}
 	else{
 		console.log("CORS is not supported");
 		return;
